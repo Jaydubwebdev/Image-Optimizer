@@ -1,0 +1,8 @@
+html {
+  overflow: hidden;
+  background: #212121;
+}
+
+#settings {
+  cursor: pointer;
+}

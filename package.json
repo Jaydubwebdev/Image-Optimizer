@@ -1,0 +1,25 @@
+{
+  "name": "catalyst-image-optimizer",
+  "productName": "Catalyst Image Optimizer",
+  "version": "1.0.0",
+  "description": "Application for optimizing images.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . electron-starter-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE string.ProductName=\"Electron Starter App\"",
+    "create-installer-win": "node installers/windows/createinstaller.js"
+  },
+  "author": "Fel",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^4.3.3",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "slash": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0",
+    "electron-winstaller": "^5.0.0"
+  }
+}

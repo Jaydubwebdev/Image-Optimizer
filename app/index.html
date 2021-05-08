@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bulma-slider.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Catalyst Image Optimizer</title>
+</head>
+<body>
+    <div class="settings has-text-right has-text-light pt-2 pr-3 pb-0">
+      <i class="fas fa-cog" id="settings"></i>
+    </div>
+
+    <div class="level has-text-light pr-4 pb-4 pl-4 has-text-centered">
+        <h1 class="is-size-4 p-4 has-text-weight-bold">Catalyst Image Optimizer</h1>
+
+        <form id="image-form">
+            <div class="pb-4">
+                <p class="pb-2">Select an Image to Optimize</p>
+                <div id="file-js-example" class="file has-name is-primary is-fullwidth">
+                    <label class="file-label">
+                        <input class="file-input" id="img" type="file">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file uploaded
+                      </span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    <strong class="is-size-7">Quality: </strong>
+                    <em class="is-size-7">Decrease the slider to decrease the image quality</em>
+                </p>
+                <input step="1" min="1" max="100" value="50" type="range" class="slider is-fullwidth is-small is-circle is-primary" id="slider">
+            </div>
+
+            <button type="submit" value="Optimize" class="button is-fullwidth is-primary has-text-dark">Optimize</button>
+        </form>
+        
+        <div class="output p-4">
+            <strong>Output Path:</strong> <span id="output-path" class="has-text-primary"></span>
+        </div>
+    </div>
+
+    <script src="js/path.js"></script>
+    <script src="js/output.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
